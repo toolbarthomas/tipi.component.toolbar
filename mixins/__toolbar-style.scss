@@ -34,7 +34,7 @@
 
 					@if $background--active != false {
 						.no-touchevents &:active,
-						&.button--active {
+						&.toolbar-button--active {
 							@include background(
 								$background--active
 							);
