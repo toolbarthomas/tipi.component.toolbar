@@ -1,0 +1,16 @@
+{
+  "name": "tipi.component.toolbar",
+  "homepage": "https://github.com/toolbarthomas/tipi.component.toolbar",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Tipi component for grouping buttons together in a toolbar.",
+  "keywords": [
+    "toolbarthomas",
+    "modular",
+    "toolbar",
+    "button"
+  ],
+  "license": "MIT",
+  "main": "_tipi.component.toolbar.scss"
+}

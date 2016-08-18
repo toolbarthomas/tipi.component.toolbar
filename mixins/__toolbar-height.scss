@@ -1,0 +1,21 @@
+@mixin toolbar-height(
+	$selector: null,
+	$height: false,
+	$gutter: false
+) {
+	.toolbar {
+		&#{$selector} {
+			#{$toolbar-button} {
+				&.toolbar-button {
+					@if $height != false {
+						height: $height;
+					}
+
+					@if $gutter != false {
+						padding: $gutter;
+					}
+				}
+			}
+		}
+	}
+}

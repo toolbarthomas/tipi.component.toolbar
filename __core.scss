@@ -1,0 +1,57 @@
+@mixin core_toolbar {
+	.toolbar {
+		display: table;
+		width: 100%;
+		height: auto;
+		table-layout: fixed;
+	}
+
+	.toolbar {
+		#{$toolbar-button} {
+			&.toolbar-button {
+				display: table-cell;
+				width: auto;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				vertical-align: middle;
+				@include appearance(none);
+				@include user-select(none);
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+
+				&,
+				&:focus,
+				&:active,
+				&:hover,
+				.no-touchevents &:hover {
+					text-decoration: none;
+				}
+
+				@if $toolbar-button-text-align != false {
+					text-align: $toolbar-button-text-align;
+				}
+
+				@if $toolbar-button-font-family != false {
+					font-family: $toolbar-button-font-family;
+				}
+
+				@if $toolbar-button-font-weight != false {
+					font-weight: $toolbar-button-font-weight;
+				}
+
+				@if $toolbar-button-font-style != false {
+					font-style: $toolbar-button-font-style;
+				}
+
+				@if $toolbar-button-transitions != false {
+					@include transition(
+						(background $toolbar-button-transition-duration $toolbar-button-transition-timing $toolbar-button-transition-delay),
+						(color $toolbar-button-transition-duration $toolbar-button-transition-timing $toolbar-button-transition-delay),
+						(border $toolbar-button-transition-duration $toolbar-button-transition-timing $toolbar-button-transition-delay)
+					);
+				}
+			}
+		}
+	}
+}

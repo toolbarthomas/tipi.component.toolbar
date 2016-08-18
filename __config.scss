@@ -1,0 +1,18 @@
+$toolbar-button: (
+	'a',
+	'input',
+	'button'
+);
+
+$toolbar-button-text-align: 	center !default;
+$toolbar-button-font-family:	false !default;
+$toolbar-button-font-weight:	700 !default;
+$toolbar-button-font-style:		normal !default;
+
+$toolbar-button-height: 44px !default;
+$toolbar-button-gutter: 14px !default;
+
+$toolbar-button-transitions: true !default;
+$toolbar-button-transition-duration: 250ms !default;
+$toolbar-button-transition-timing: ease-in-out !default;
+$toolbar-button-transition-delay: 0ms !default;
