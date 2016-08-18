@@ -1,8 +1,8 @@
 @mixin toolbar-style(
 	$selector: null,
-	$background-color: false,
-	$background-color--hover: false,
-	$background-color--active: false,
+	$background: false,
+	$background--hover: false,
+	$background--active: false,
 	$color: false,
 	$color--hover: false,
 	$color--active: false,
@@ -18,20 +18,26 @@
 		&#{$selector} {
 			#{$toolbar-button} {
 				&.toolbar-button {
-					@if $background-color != false {
-						background-color: $background-color;
+					@if $background != false {
+						@include background(
+							$background
+						);
 					}
 
-					@if $background-color--hover != false {
+					@if $background--hover != false {
 						.no-touchevents &:hover {
-							background-color: $background-color--hover;
+							@include background(
+								$background--hover
+							);
 						}
 					}
 
-					@if $background-color--active != false {
+					@if $background--active != false {
 						.no-touchevents &:active,
 						&.button--active {
-							background-color: $background-color--active;
+							@include background(
+								$background--active
+							);
 						}
 					}
 
