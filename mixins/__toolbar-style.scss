@@ -60,6 +60,12 @@
 
 					@if $border != false {
 						border: $border;
+
+						+ #{$toolbar-button} {
+							&.toolbar-button {
+								border-left: 0;
+							}
+						}
 					}
 
 					@if $border-color--hover != false {
@@ -76,7 +82,15 @@
 					}
 
 					@if $border-radius != false {
-						border-radius: $border-radius;
+						&:first-child {
+							border-radius-top-left-radius: $border-radius;
+							border-radius-bottom-left-radius: $border-radius;
+						}
+
+						&:last-child {
+							border-radius-top-right-radius: $border-radius;
+							border-radius-bottom-right-radius: $border-radius;
+						}
 					}
 
 					@if $button-glyph != false {
